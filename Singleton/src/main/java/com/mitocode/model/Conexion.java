@@ -18,11 +18,6 @@ public class Conexion {
 			instancia = new Conexion();
 		}
 		return instancia;
-		/*
-		 * if(instancia == null) {
-			instancia = new Conexion();
-		   }
-		 */
 	}
 	
 	//Método de prueba
