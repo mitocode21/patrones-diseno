@@ -3,7 +3,7 @@ target/
 .metadata
 .recommenders
 RemoteSystemsTempFiles/
-Prototype/
+Facade/
 
 ### STS ###
 .apt_generated
