@@ -1,0 +1,29 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui">
+
+<h:head></h:head>
+<body>
+	<h:form>
+		<p:commandButton value="Seleccionar MYSQL" actionListener="#{personaController.seleccionar('MYSQL')}" update="dt"/>
+		<p:commandButton value="Seleccionar POSTGRESQL" actionListener="#{personaController.seleccionar('POSTGRESQL')}" update="dt"/>
+	
+		<p:dataTable id="dt" value="#{personaController.lista}" var="p">
+			<p:column headerText="ID">
+				<p:outputLabel value="#{p.id}"/>
+			</p:column>
+
+			<p:column headerText="Nombres">
+				<p:outputLabel value="#{p.nombres}"/>
+			</p:column>
+
+			<p:column headerText="Edad">
+				<p:outputLabel value="#{p.edad}"/>
+			</p:column>
+		</p:dataTable>
+	</h:form>
+</body>
+</html>
